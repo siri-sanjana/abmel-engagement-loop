@@ -54,17 +54,17 @@ export const ProductDetailsWidget = ({ onComplete }: { onComplete: (data: any) =
             <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 shadow-sm">
 
                 <div className="space-y-6">
-                    {/* Project Name */}
+                    {/* Brand Name */}
                     <div>
                         <label className="block text-xs font-semibold text-slate-300 mb-2 uppercase tracking-wide">
-                            Project Name
+                            Brand Name
                         </label>
                         <div className="relative">
                             <FileText className="absolute left-3 top-3 w-4 h-4 text-slate-500" />
                             <input
                                 type="text"
                                 className="w-full pl-10 pr-4 py-2 bg-slate-950 border border-slate-700 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none text-slate-200 text-sm placeholder:text-slate-600"
-                                placeholder="e.g. Summer Launch 2024"
+                                placeholder="e.g. Nike, Apple, Samsung"
                                 value={data.projectName}
                                 onChange={e => setData({ ...data, projectName: e.target.value })}
                             />
@@ -75,14 +75,14 @@ export const ProductDetailsWidget = ({ onComplete }: { onComplete: (data: any) =
                         {/* Product Name */}
                         <div>
                             <label className="block text-xs font-semibold text-slate-300 mb-2 uppercase tracking-wide">
-                                Product Designation
+                                Product Name
                             </label>
                             <div className="relative">
                                 <ShoppingBag className="absolute left-3 top-3 w-4 h-4 text-slate-500" />
                                 <input
                                     type="text"
                                     className="w-full pl-10 pr-4 py-2 bg-slate-950 border border-slate-700 rounded-md focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none text-slate-200 text-sm placeholder:text-slate-600"
-                                    placeholder="e.g. Quantum Neural Chip"
+                                    placeholder="e.g. AirPods Pro, Galaxy S24"
                                     value={data.product}
                                     onChange={e => setData({ ...data, product: e.target.value })}
                                 />

@@ -1,8 +1,9 @@
 import { Home, PlayCircle, BarChart2, Settings, ShieldCheck, Box } from 'lucide-react';
 import { useNavigationStore } from '../store/useNavigationStore';
 
-export const Sidebar = () => {
+export const Sidebar = ({ onNavClick }: { onNavClick?: () => void } = {}) => {
     const { currentView, setView } = useNavigationStore();
+    const nav = (view: string) => { setView(view as any); onNavClick?.(); };
 
     return (
         <aside className="w-64 bg-slate-950 text-white h-screen fixed left-0 top-0 flex flex-col border-r border-slate-800 shadow-xl z-50">
@@ -23,40 +24,15 @@ export const Sidebar = () => {
             <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
                 <div className="mb-6">
                     <p className="px-3 text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Core Platform</p>
-                    <NavItem
-                        icon={<Home size={18} />}
-                        label="Dashboard"
-                        active={currentView === 'dashboard'}
-                        onClick={() => setView('dashboard')}
-                    />
-                    <NavItem
-                        icon={<PlayCircle size={18} />}
-                        label="Active Campaigns"
-                        active={currentView === 'campaigns'}
-                        onClick={() => setView('campaigns')}
-                    />
-                    <NavItem
-                        icon={<BarChart2 size={18} />}
-                        label="Performance"
-                        active={currentView === 'performance'}
-                        onClick={() => setView('performance')}
-                    />
+                    <NavItem icon={<Home size={18} />} label="Dashboard" active={currentView === 'dashboard'} onClick={() => nav('dashboard')} />
+                    <NavItem icon={<PlayCircle size={18} />} label="Active Campaigns" active={currentView === 'campaigns'} onClick={() => nav('campaigns')} />
+                    <NavItem icon={<BarChart2 size={18} />} label="Analytics" active={currentView === 'performance'} onClick={() => nav('performance')} />
                 </div>
 
                 <div>
                     <p className="px-3 text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Governance</p>
-                    <NavItem
-                        icon={<ShieldCheck size={18} />}
-                        label="Guardrails & Safety"
-                        active={currentView === 'guardrails'}
-                        onClick={() => setView('guardrails')}
-                    />
-                    <NavItem
-                        icon={<Settings size={18} />}
-                        label="System Settings"
-                        active={currentView === 'settings'}
-                        onClick={() => setView('settings')}
-                    />
+                    <NavItem icon={<ShieldCheck size={18} />} label="Guardrails & Safety" active={currentView === 'guardrails'} onClick={() => nav('guardrails')} />
+                    <NavItem icon={<Settings size={18} />} label="System Settings" active={currentView === 'settings'} onClick={() => nav('settings')} />
                 </div>
             </nav>
 

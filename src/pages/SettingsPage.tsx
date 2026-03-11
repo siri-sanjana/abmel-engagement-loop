@@ -51,23 +51,38 @@ export const SettingsPage = () => {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-semibold text-slate-400 mb-3">Creativity Mode</label>
-                            <div className="grid grid-cols-3 gap-3">
+                            <label className="block text-sm font-semibold text-slate-400 mb-1">Creativity Mode</label>
+                            <p className="text-xs text-slate-600 mb-3">Controls how the AI balances factual product representation with creative styling when generating campaign assets.</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                 {[
-                                    { val: 0.2, label: 'Precise', desc: 'Factual & Direct' },
-                                    { val: 0.7, label: 'Balanced', desc: 'Standard Mix' },
-                                    { val: 1.0, label: 'Artistic', desc: 'Max Creative Freedom' }
+                                    {
+                                        val: 0.2, label: 'Precise', icon: '🎯',
+                                        desc: 'Accurate, product-focused outputs.',
+                                        detail: 'Used when factual representation is required.'
+                                    },
+                                    {
+                                        val: 0.7, label: 'Balanced', icon: '⚖️',
+                                        desc: 'Accuracy + moderate creativity.',
+                                        detail: 'Best for standard marketing campaigns.'
+                                    },
+                                    {
+                                        val: 1.0, label: 'Artistic', icon: '🎨',
+                                        desc: 'Maximum creative freedom.',
+                                        detail: 'Used for experimental or visual campaigns.'
+                                    },
                                 ].map((mode) => (
                                     <button
                                         key={mode.label}
                                         onClick={() => updateSettings({ temperature: mode.val })}
-                                        className={`p-3 rounded-lg border text-left transition-all ${temperature === mode.val
-                                            ? 'bg-purple-500/10 border-purple-500 text-purple-400'
-                                            : 'bg-slate-950 border-slate-800 text-slate-500 hover:border-slate-700'
+                                        className={`p-4 rounded-xl border text-left transition-all ${temperature === mode.val
+                                                ? 'bg-purple-500/10 border-purple-500 text-purple-400'
+                                                : 'bg-slate-950 border-slate-800 text-slate-500 hover:border-slate-700'
                                             }`}
                                     >
+                                        <div className="text-xl mb-2">{mode.icon}</div>
                                         <div className="text-sm font-bold mb-1">{mode.label}</div>
-                                        <div className="text-[10px] opacity-70">{mode.desc}</div>
+                                        <div className="text-[11px] opacity-80 leading-relaxed">{mode.desc}</div>
+                                        <div className="text-[10px] opacity-50 mt-1 leading-relaxed">{mode.detail}</div>
                                     </button>
                                 ))}
                             </div>
