@@ -97,42 +97,17 @@ export const Sidebar = ({ isOpen = false, onClose }: SidebarProps) => {
                     </div>
                 </nav>
 
-                {/* System Status Footer */}
-                <div className="p-4 border-t border-slate-800 bg-slate-900/50">
-                    <SystemStatusPanel />
-                </div>
             </aside>
         </>
     );
 };
 
-// Extracted for cleaner component
-import { useSystemHealth } from '../../hooks/useSystemHealth';
-
-const SystemStatusPanel = () => {
-    const health = useSystemHealth();
-
-    // Normalize status color
-    const statusColor = health.status === 'ONLINE' ? 'bg-emerald-500' : 'bg-rose-500';
-    const statusText = health.status === 'ONLINE' ? 'text-emerald-500' : 'text-rose-500';
-
-    return (
-        <div className="space-y-3">
-            <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-slate-400">System Status</span>
-                <div className="flex items-center gap-2">
-                    <div className={clsx("w-2 h-2 rounded-full", statusColor)}></div>
-                    <span className={clsx("text-xs font-medium", statusText)}>{health.status}</span>
-                </div>
-            </div>
-
-            <StatusMetric label="Neural Engine" value={health.aiStatus === 'Operational' ? 100 : 60} color="bg-blue-600" displayValue={health.aiStatus} />
-            <StatusMetric label="DB Latency" value={Math.min(100, (health.dbLatency / 200) * 100)} color="bg-slate-500" displayValue={`${health.dbLatency}ms`} />
-        </div>
-    );
-};
-
-const NavItem = ({ icon, label, active = false, onClick }: { icon: any, label: string, active?: boolean, onClick: () => void }) => (
+const NavItem = ({ icon, label, active = false, onClick }: {
+    icon: React.ReactNode;
+    label: string;
+    active?: boolean;
+    onClick: () => void;
+}) => (
     <button
         onClick={onClick}
         className={clsx(
@@ -145,19 +120,4 @@ const NavItem = ({ icon, label, active = false, onClick }: { icon: any, label: s
         {icon}
         <span>{label}</span>
     </button>
-);
-
-const StatusMetric = ({ label, value, color, displayValue }: { label: string, value: number, color: string, displayValue?: string }) => (
-    <div>
-        <div className="flex justify-between text-[10px] text-slate-500 mb-1">
-            <span>{label}</span>
-            <span className="text-slate-400 font-mono">{displayValue}</span>
-        </div>
-        <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-            <div
-                style={{ width: `${value}%` }}
-                className={clsx(color, "h-full rounded-full")}
-            />
-        </div>
-    </div>
 );

@@ -36,33 +36,6 @@ export const Sidebar = ({ onNavClick }: { onNavClick?: () => void } = {}) => {
                 </div>
             </nav>
 
-            {/* System Status Footer */}
-            <div className="p-4 border-t border-slate-800 bg-slate-900/30">
-                <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">System Status</span>
-                    <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20">
-                        <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                        <span className="text-[10px] font-bold text-green-500">ONLINE</span>
-                    </span>
-                </div>
-                <div className="space-y-2">
-                    <div className="flex justify-between text-xs text-slate-500">
-                        <span>GPU Load</span>
-                        <span className="text-slate-300">12%</span>
-                    </div>
-                    <div className="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
-                        <div className="bg-blue-600 w-[12%] h-full rounded-full"></div>
-                    </div>
-
-                    <div className="flex justify-between text-xs text-slate-500 mt-1">
-                        <span>Memory</span>
-                        <span className="text-slate-300">4.2GB</span>
-                    </div>
-                    <div className="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
-                        <div className="bg-indigo-500 w-[35%] h-full rounded-full"></div>
-                    </div>
-                </div>
-            </div>
         </aside>
     );
 };
