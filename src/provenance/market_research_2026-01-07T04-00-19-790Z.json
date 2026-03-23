@@ -10,22 +10,14 @@
     "competitiveLandscape": {
       "maturity": "competitive",
       "competitors": [],
-      "dominantNarratives": [
-        "Innovation",
-        "Performance",
-        "Design"
-      ]
+      "dominantNarratives": ["Innovation", "Performance", "Design"]
     },
     "keyOpportunities": [
       "Niche feature focus",
       "Design aesthetics",
       "Customer support excellence"
     ],
-    "keyRisks": [
-      "Commoditization",
-      "Spec wars",
-      "Design copycats"
-    ],
+    "keyRisks": ["Commoditization", "Spec wars", "Design copycats"],
     "recommendedPositioning": "The Premium Choice",
     "suggestedMessagingAngles": [
       "Performance Leader",

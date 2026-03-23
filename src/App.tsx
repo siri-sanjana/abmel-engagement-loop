@@ -1,41 +1,37 @@
-import { AppShell } from './components/layout/AppShell';
-import { Dashboard } from './pages/Dashboard';
-import { useNavigationStore } from './store/useNavigationStore';
-import { CampaignsPage } from './pages/CampaignsPage';
-import { PerformancePage } from './pages/PerformancePage';
-import { GuardrailsPage } from './pages/GuardrailsPage';
-import { SettingsPage } from './pages/SettingsPage';
-import { CampaignResultsPage } from './pages/CampaignResultsPage';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { LoginPage } from './pages/Auth/LoginPage';
-import { SignupPage } from './pages/Auth/SignupPage';
-import { ProtectedRoute } from './components/ProtectedRoute';
+import { AppShell } from "./components/layout/AppShell";
+import { Dashboard } from "./pages/Dashboard";
+import { useNavigationStore } from "./store/useNavigationStore";
+import { CampaignsPage } from "./pages/CampaignsPage";
+import { PerformancePage } from "./pages/PerformancePage";
+import { GuardrailsPage } from "./pages/GuardrailsPage";
+import { SettingsPage } from "./pages/SettingsPage";
+import { CampaignResultsPage } from "./pages/CampaignResultsPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LoginPage } from "./pages/Auth/LoginPage";
+import { SignupPage } from "./pages/Auth/SignupPage";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 const DashboardView = () => {
   const { currentView } = useNavigationStore();
 
   const renderContent = () => {
     switch (currentView) {
-      case 'dashboard':
+      case "dashboard":
         return <Dashboard />;
-      case 'campaigns':
+      case "campaigns":
         return <CampaignsPage />;
-      case 'performance':
+      case "performance":
         return <PerformancePage />;
-      case 'guardrails':
+      case "guardrails":
         return <GuardrailsPage />;
-      case 'settings':
+      case "settings":
         return <SettingsPage />;
       default:
         return <Dashboard />;
     }
   };
 
-  return (
-    <AppShell>
-      {renderContent()}
-    </AppShell>
-  );
+  return <AppShell>{renderContent()}</AppShell>;
 };
 
 function App() {

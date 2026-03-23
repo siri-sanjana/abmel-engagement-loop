@@ -1,76 +1,60 @@
-# ABMEL — Autonomous Brand Marketing Engagement Loop
+# ABMBEL - AI Marketing Engagement Loop
 
-ABMEL is a state-of-the-art autonomous marketing platform designed to orchestrate complex creative workflows using AI agents. It simplifies the entire campaign lifecycle, from brand context ingestion to high-fidelity creative generation and optimization.
+ABMBEL is an advanced AI-driven marketing engagement platform designed to automate and optimize the end-to-end marketing lifecycle. By utilizing a multi-agent architecture, the platform streamlines complex tasks from persona modeling and market intelligence to campaign planning and creative execution.
 
-![ABMEL Dashboard](https://raw.githubusercontent.com/Varshithathi2006/ABMBEL---Marketing-Engagement-loop/main/water_bottle.png)
+## About the Project
 
-## 🚀 Key Features
+The AI Marketing Engagement Loop (ABMBEL) is built to provide marketers with a comprehensive suite of AI agents that work collaboratively to deliver high-performance marketing results. 
 
-- **Autonomous Agent Orchestration**: Powered by LangChain, the system manages a suite of specialized agents (Planning, Market Research, Persona, and Creative) to build holistic marketing strategies.
-- **Dynamic Campaign Setup**: Fully customizable campaign briefings including:
-  - Multi-variant selector (1-10 variants).
-  - Brand Guardrail file uploads (PDF, DOCX, TXT) with Supabase Storage integration.
-  - Expanded product and audience profiling.
-- **AI-Driven Creative Suite**:
-  - High-fidelity image generation via Pollinations AI.
-  - **Magic Wand Image Editor**: Describe changes in natural language to refine and regenerate specific variants.
-  - Complete compliance reporting based on brand guardrails.
-- **Neural Interface**: A premium, dark-mode chat interface for interacting with the AI agents in real-time.
-- **Campaign Archive**: Persist and review all historical campaign data, agent logs, and creative artifacts.
+Key components include:
+- **Persona Modeling Agent**: Analyzes data to create detailed target customer personas.
+- **Market Intelligence Agent**: Gathers and evaluates market trends and competitor data.
+- **Planning Agent**: Develops strategic campaign roadmaps based on intelligence.
+- **Creative Generation Agent**: Automates the production of marketing assets.
+- **Image Generation Agent**: Creates high-quality visual content for campaigns.
+- **Evaluation & Guardrails Agents**: Ensures all output meets quality standards and regulatory compliance.
+- **Learning Agent**: Continuously optimizes campaign performance based on real-time feedback loops.
 
-## 🛠 Tech Stack
+## Technical Architecture
 
-- **Frontend**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/), [Lucide React](https://lucide.dev/)
-- **State Management**: [Zustand](https://docs.pmnd.rs/zustand/)
-- **Backend**: [Supabase](https://supabase.com/) (Database, Authentication, Storage)
-- **AI/ML**: [LangChain](https://js.langchain.com/), [Groq](https://groq.com/), [Pollinations AI](https://pollinations.ai/)
+The platform is developed using modern web technologies:
+- **Frontend**: React with TypeScript and Vite for a high-performance user interface.
+- **Styling**: Tailwind CSS and Framer Motion for a responsive and dynamic experience.
+- **Backend Services**: Supabase for database management and authentication.
+- **AI Integration**: LangChain and Groq for orchestrating specialized AI agents.
+- **State Management**: Zustand for efficient application state handling.
 
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
-
-- Node.js (v18+)
-- NPM or Yarn
-- Supabase project credentials
-- Hugging Face or Groq API keys
+- Node.js (v18 or higher)
+- npm or yarn
 
 ### Installation
-
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Varshithathi2006/ABMBEL---Marketing-Engagement-loop.git
-   cd ABMBEL---Marketing-Engagement-loop
+   git clone https://github.com/siri-sanjana/abmel.git
    ```
-
-2. Install dependencies:
+2. Navigate to the project directory:
+   ```bash
+   cd abmel
+   ```
+3. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Set up environment variables:
-   Create a `.env` file in the root directory and add your credentials:
-   ```env
-   VITE_SUPABASE_URL=your_supabase_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-   GROQ_API_KEY=your_groq_key
-   HF_TOKEN=your_hugging_face_token
-   ```
+### Execution
+To launch the development server:
+```bash
+npm run dev
+```
 
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+To build for production:
+```bash
+npm run build
+```
 
-## 📂 Project Structure
+## License
 
-- `src/components`: UI components and agent interaction widgets.
-- `src/pages`: Main application views (Dashboard, Setup, Review, Archive).
-- `src/services`: API clients, Supabase service, and LangChain agent logic.
-- `src/store`: Zustand state management modules.
-- `src/scripts`: Utility scripts for image syncing and verification.
-
----
-
-Built with 💜 by the ABMEL Team.
-
+This project is licensed under the MIT License.

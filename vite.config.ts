@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -8,15 +8,20 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router-vendor': ['react-router-dom'],
-          'ui-vendor': ['framer-motion', 'lucide-react', 'clsx', 'tailwind-merge'],
-          'chart-vendor': ['recharts'],
-          'supabase-vendor': ['@supabase/supabase-js'],
-          'state-vendor': ['zustand']
-        }
-      }
-    }
+          "react-vendor": ["react", "react-dom"],
+          "router-vendor": ["react-router-dom"],
+          "ui-vendor": [
+            "framer-motion",
+            "lucide-react",
+            "clsx",
+            "tailwind-merge",
+          ],
+          "chart-vendor": ["recharts"],
+          "supabase-vendor": ["@supabase/supabase-js"],
+          "state-vendor": ["zustand"],
+        },
+      },
+    },
   },
   plugins: [react()],
-})
+});

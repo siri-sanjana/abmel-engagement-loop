@@ -12,7 +12,6 @@
 }
 
 @layer utilities {
-
   /* Enterprise Card: Flat, subtle border, no blur needed for main content */
   .glass-card {
     @apply bg-slate-900 border border-slate-800 shadow-sm;

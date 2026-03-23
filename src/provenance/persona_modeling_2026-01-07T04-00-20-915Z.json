@@ -10,41 +10,19 @@
         "id": "p_gen_1",
         "name": "The Modern Consumer",
         "descriptor": "Value-driven shopper",
-        "motivations": [
-          "Quality",
-          "Convenience",
-          "Social Proof"
-        ],
-        "painPoints": [
-          "Wasted money",
-          "Poor service",
-          "Obsolescence"
-        ],
+        "motivations": ["Quality", "Convenience", "Social Proof"],
+        "painPoints": ["Wasted money", "Poor service", "Obsolescence"],
         "behavioralTraits": {
           "attentionSpan": "Medium",
           "purchaseMindset": "considered",
-          "contentPreference": [
-            "Reviews",
-            "Comparison Videos"
-          ]
+          "contentPreference": ["Reviews", "Comparison Videos"]
         },
-        "preferredPlatforms": [
-          "Facebook",
-          "Instagram",
-          "Search"
-        ],
+        "preferredPlatforms": ["Facebook", "Instagram", "Search"],
         "creativeConstraints": {
           "tone": "Helpful, Clear, Friendly",
           "visualStyle": "Product-hero, Lifestyle context",
-          "copyDo": [
-            "Focus on benefits",
-            "Use social proof",
-            "Clear CTA"
-          ],
-          "copyDont": [
-            "Be vague",
-            "Hide pricing"
-          ]
+          "copyDo": ["Focus on benefits", "Use social proof", "Clear CTA"],
+          "copyDont": ["Be vague", "Hide pricing"]
         }
       },
       "secondaryPersonas": [],
