@@ -1,6 +1,6 @@
-# ABMBEL - AI Marketing Engagement Loop
+# ABMEL - AI Marketing Engagement Loop
 
-ABMBEL is an advanced AI-driven marketing engagement platform designed to automate and optimize the end-to-end marketing lifecycle. By utilizing a multi-agent architecture, the platform streamlines complex tasks from persona modeling and market intelligence to campaign planning and creative execution.
+ABMEL is an advanced AI-driven marketing engagement platform designed to automate and optimize the end-to-end marketing lifecycle. By utilizing a multi-agent architecture, the platform streamlines complex tasks from persona modeling and market intelligence to campaign planning and creative execution.
 
 ## About the Project
 
